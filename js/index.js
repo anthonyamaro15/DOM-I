@@ -48,6 +48,16 @@ logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 const { nav, cta, "main-content": mainCont, contact, footer } = siteContent;
 
+const parentLink = document.querySelector("header nav");
+
+const home = document.createElement("a");
+const more = document.createElement("a");
+
+home.textContent = "Home";
+more.textContent = "More";
+parentLink.prepend(home);
+parentLink.appendChild(more);
+
 const links = document.querySelectorAll("header nav a");
 
 const subTitle = document.querySelector(".cta-text h1");
@@ -95,6 +105,10 @@ links[2].textContent = nav["nav-item-3"];
 links[3].textContent = nav["nav-item-4"];
 links[4].textContent = nav["nav-item-5"];
 links[5].textContent = nav["nav-item-6"];
+
+links.forEach(link => {
+  link.style.color = "green";
+});
 
 subTitle.textContent = cta.h1;
 getStartedBtn.textContent = cta.button;
