@@ -47,6 +47,7 @@ let logo = document.getElementById("logo-img");
 logo.setAttribute("src", siteContent["nav"]["img-src"]);
 
 const { nav, cta, "main-content": mainCont, contact, footer } = siteContent;
+const h1 = cta.h1.split(" ").join("<br>");
 
 const parentLink = document.querySelector("header nav");
 
@@ -113,7 +114,7 @@ links.forEach(link => {
   });
 });
 
-subTitle.textContent = cta.h1;
+subTitle.innerHTML = h1;
 getStartedBtn.textContent = cta.button;
 ctaImg.src = cta["img-src"];
 toph4.textContent = mainCont["features-h4"];
