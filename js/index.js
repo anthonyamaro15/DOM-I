@@ -108,6 +108,9 @@ links[5].textContent = nav["nav-item-6"];
 
 links.forEach(link => {
   link.style.color = "green";
+  link.addEventListener("click", () => {
+    link.style.color = "purple";
+  });
 });
 
 subTitle.textContent = cta.h1;
